@@ -113,6 +113,15 @@ p{
 }
 h1{
     margin: 0;
+    font-size: 230%;
+    text-transform: uppercase;
+}
+h3{
+    text-transform: uppercase;
+}
+h4{
+    text-transform: uppercase;
+    font-size: 200%;
 }
 body{
    max-width: 100%;
@@ -122,11 +131,11 @@ body .contenedor{
     background-color: #f2f2f2;
     
 }
-/*
+
 .encabezado{
-    height: 700px;
+    height: 100vh;
 }
-@media only screen and (min-width: 768px){
+/* @media only screen and (min-width: 768px){
 .encabezado{
     height: 100%;
 }
@@ -135,14 +144,15 @@ body .contenedor{
     .encabezado{
         height: 100%;
     }
-    }
-*/.encabezado .logo{
+    } */
+.encabezado .logo{
     background: url(../img/encabezado.jpg);
     width: 100%;
-    height: 700px;
+    height: 88%;
+    background-size: 100% 100%;
     
 }
-/*
+/* 
 @media only screen and (min-width: 768px){
     .encabezado .logo{
         background-size: 100%;
@@ -156,33 +166,42 @@ body .contenedor{
         background-repeat: no-repeat;
         height: 100%;
     }
-}*/
+} */
 
-.encabezado .logo .iconos-superiores{
+.encabezado .logo .contenedor-iconos-superiores{
     display: flex;
     justify-content: center;
-    
+    padding-top: 1%;
 }
-.encabezado .logo .iconos-superiores i{
-    padding: 0 10px;
+.encabezado .logo .contenedor-iconos-superiores .iconos-superiores{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+.encabezado .logo .contenedor-iconos-superiores i{
     color: white;
-    text-align: center;
-    margin-top: 10px;
+    text-align: center;  
 }
 .encabezado .logo .texto-encabezado{
-    text-align: center;
+    margin: 0 auto;
     color:white;
-    margin: 50px 300px 0 300px; 
+    width: 50%;
+    margin-top: 5%; 
 }
 .encabezado .logo .texto-encabezado .parrafos{
     display: flex;
     justify-content: space-between;
 }
-.encabezado .logo .texto-encabezado .titulo{
-    font-size: 100px;
+.encabezado .logo .texto-encabezado .titulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.encabezado .logo .texto-encabezado .titulos .titulo{
+    font-size: 590%;
 }
 .encabezado .logo .texto-encabezado .subtitulo{
-    font-size: 25px;
+    font-size: 150%;
 }
 .texto-encabezado .parrafos i{
     color:#fe4818;
@@ -191,11 +210,13 @@ body .contenedor{
     font-weight: bold;
 }
 .barra{
-    width: 100%;
+    max-width: 100%;
+    height: 12%;
     background-color:#161616;
-    padding: 10px 30px;
+    padding: .8% 2%;
 }    
 .barra .navegacion{
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,25 +224,29 @@ body .contenedor{
 .barra .navegacion p{
     text-decoration: none;
     color:white;
+    width: 50%;
 }
 .barra .navegacion a{
     text-decoration: none;
     color:white;
+    width: 50%;
 }
 .barra .navegacion .link-titulo{
-    font-size: 40px;
+    font-size: 250%;
     display:flex;
+    width: 50%;
 }
 .barra .navegacion .link-titulo i{
-    padding: 7px 20px 0 0;
+    padding: 1% 2% 0 0;
 }
 .barra .navegacion .link-nav{
-    font-size: 20px;
+    font-size: 125%;
     display: flex;
     align-items: center;
+    width: 50%;
 }
 .barra .navegacion .link-nav a{
-    padding: 0 10px;
+    padding: 0 2%;
     transition: color .3s ease-in
 }
 .barra .navegacion .link-nav a:hover{
@@ -229,6 +254,7 @@ body .contenedor{
 }
 .barra .navegacion .link-nav .reservas{
     color:#fe4818;
+    padding: 2% 7%;
     border: 1px solid #fe4818;
     transition: color .3s ease-in;
 }
@@ -239,58 +265,62 @@ body .contenedor{
 .barra .navegacion .link-titulo i{
     color:#fe4818;
 }
-.contenedor-seccion{
-    margin: 50px 40px 0 40px;
-    
+.intro{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
 }
-.contenedor-seccion .secciones{
+.intro .contenedor-intro{
     display:flex;
     align-items: center;
     flex-direction: column;
+    width: 90%;
 }
-.contenedor-seccion .secciones p{
+.intro .contenedor-intro p{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 3%;
 }
 .hero{
-    height: 757px;
-    margin: 50px 0;
+    height: 830px;
+    width: 100%;
     background-image: url(../img/bg-talleres.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    
 }
 .hero .contenido-hero{
-    background: rgba(253, 251, 251, 0.9);
-    height: 555px;
-    width: 550px;
-    display: inline-block;
-    margin: 100px 900px 100px 100px;
+    background: rgba(253, 251, 251, 0.3);
+    height: 70%;
+    width: 50%;
+    padding-left: 5%;
+    
 }
 .hero .contenido-hero .hero-flex{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 3%;
 }
 .hero .contenido-hero .hero-flex h1{
-    text-transform: uppercase;
-    font-size: 30px;
-    margin-top: 20px;
+    margin-top: 3%;
 }
 .hero .contenido-hero .hero-flex .iconos-programa{
-    margin-top: 20px; 
+    margin-top: 3%; 
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 .hero-flex .iconos-programa i{
-   
     color: #fe4818;
 }
 .iconos-programa i a{
-    padding-left: 5px;
+    padding-left: 5%;
     color:#6b6b6b;
-    font-size: 20px;
+    font-size: 140%;
     font-weight: bold;
     text-decoration: none;
 }
@@ -306,6 +336,7 @@ body .contenedor{
     margin-top: -15px;
     margin-left: 100px;
 }
+/* LINEA NARANJA */
 .hero .hero-flex .contenedor-talleres{
     display: flex;
     flex-direction: column;
@@ -315,18 +346,18 @@ body .contenedor{
     color: #fe4818;
 }
 .contenedor-talleres p{
-    margin-top: 10px;
+    margin-top: 2%;
 }
 .contenedor-talleres p i{
     color: #fe4818;
-    padding-right: 5px;
-    size: 20px;
+    padding-right: .8%;
+    font-size: 120%;
 }
 .contenedor-talleres .linea-negra{
     background-color: #545454;
     height: 1px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 .contenedor-talleres .contenido-2 h3{
     margin: 0;
@@ -334,10 +365,11 @@ body .contenedor{
 .contenido-hero .hero-flex .ver-todos{
     display: flex;
     justify-content: flex-end;
-    margin-top: 40px;
+    margin-top: 8%;
+    width: 100%;
 }
 .contenido-hero .hero-flex .ver-todos a{
-    padding: 10px 40px;
+    padding: 2% 5%;
     text-decoration: none;
     background-color: #fe4818;
     color: white;
@@ -346,20 +378,27 @@ body .contenedor{
 .invitados{
     width: 100%;
     height: 700px;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .invitados .encabezado-invitados{
+    height: 20%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .invitados .fotos-invitados{
-    height: 600px;
+    height: 80%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 40px;
-    grid-column-gap: 15px;
-    margin: 20px 40px;
+    grid-row-gap: 10%;
+    grid-column-gap: 2%;
+    margin-top: 1%;
 }
 .invitados .fotos-invitados .inv-1{
     background-image: url(../img/invitado1.jpg);
@@ -370,9 +409,9 @@ body .contenedor{
 }
 .invitados .fotos-invitados .inv-1 p{
     background: rgba(49, 49, 49, 0.9);
-    padding: 20px 0 20px 20px;;
+    padding: 5% 0 5% 5%;
     color: #fe4818;
-    font-size: 25px;
+    font-size: 150%;
     width: 100%;
 }
 .invitados .fotos-invitados .inv-2{
@@ -384,9 +423,9 @@ body .contenedor{
 }
 .invitados .fotos-invitados .inv-2 p{
     background: rgba(49, 49, 49, 0.9);
-    padding: 20px 0 20px 20px;;
+    padding: 5% 0 5% 5%;
     color: #fe4818;
-    font-size: 25px;
+    font-size: 150%;
     width: 100%;
 }
 .invitados .fotos-invitados .inv-3{
@@ -398,9 +437,9 @@ body .contenedor{
 }
 .invitados .fotos-invitados .inv-3 p{
     background: rgba(49, 49, 49, 0.9);
-    padding: 20px 0 20px 20px;;
+    padding: 5% 0 5% 5%;
     color: #fe4818;
-    font-size: 25px;
+    font-size: 150%;
     width: 100%;
 }
 .invitados .fotos-invitados .inv-4{
@@ -412,9 +451,9 @@ body .contenedor{
 }
 .invitados .fotos-invitados .inv-4 p{
     background: rgba(49, 49, 49, 0.9);
-    padding: 20px 0 20px 20px;;
+    padding: 5% 0 5% 5%;
     color: #fe4818;
-    font-size: 25px;
+    font-size: 150%;
     width: 100%;
 }
 .invitados .fotos-invitados .inv-5{
@@ -426,9 +465,9 @@ body .contenedor{
 }
 .invitados .fotos-invitados .inv-5 p{
     background: rgba(49, 49, 49, 0.9);
-    padding: 20px 0 20px 20px;;
+    padding: 5% 0 5% 5%;
     color: #fe4818;
-    font-size: 25px;
+    font-size: 150%;
     width: 100%;
 }
 .invitados .fotos-invitados .inv-6{
@@ -440,39 +479,72 @@ body .contenedor{
 }
 .invitados .fotos-invitados .inv-6 p{
     background: rgba(49, 49, 49, 0.9);
-    padding: 20px 0 20px 20px;;
+    padding: 5% 0 5% 5%;
     color: #fe4818;
-    font-size: 25px;
+    font-size: 150%;
     width: 100%;
 }
 .resumen{
+    height: 600px;
     width: 100%;
-    margin-top: 40px;
+    background-image: url(../img/bg-resumen.jpg);
+    background-size: 100% 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.resumen img{
-    max-height: 600px;
+.resumen .contenedor-resumen{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
+    height: 100%;
+}
+.resumen .contenedor-resumen .apartado{
+    margin: 0;
+}
+.resumen .contenedor-resumen .apartado .numero{    
+    font-size: 300%;
+    color: #fe4818;
+    font-weight: bold;
+    text-align: center;
+}
+.resumen .contenedor-resumen .apartado .texto{
+    font-size: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
 }
 .precios{
     width: 100%;
     height: 600px;
-    padding: 40px 40px;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .precios .encabezado-precios{
+    height: 20%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .precios .contenedor-precios{
+    height: 80%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 40px;
+    grid-column-gap: 4%;
     max-width: 100%;
-    margin-top: 40px;
 }
 .precios .contenedor-precios .un-dia{
     background-color: white;
-    height: 450px;
+    height: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -481,83 +553,110 @@ body .contenedor{
 }
 .precios .contenedor-precios .dos-dias{
     background-color: white;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid #cdcdcd;
-}.precios .contenedor-precios .tres-dias{
-    background-color: white;
-    height: 450px;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border: 1px solid #cdcdcd;
 }
+.precios .contenedor-precios .tres-dias{
+    background-color: white;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #cdcdcd;
+    transition: .5s ease;
+}
+/* .precios .contenedor-precios .tres-dias:hover{
+    height: 100%;
+    width: 120%;
+    
+    border: 1px solid #fe4818;
+}esto no soy capaz de hacerlo bien con el hover, queda por detras de las otras columnas */
 .precios .contenedor-precios .titulo{
     color: #fe4818;
-    font-size: 30px;
+    font-size: 175%;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 5%;
+    text-align: center;
    
 }
 .precios .contenedor-precios .precio{
-    font-size: 50px;
+    font-size: 350%;
     font-weight: bold;
     color: black;
+    text-align: center;
 }
 .precios .contenedor-precios p{
     color: #767676;
+    width: 100%;
+    text-align: center;
+   
 }
 .precios .contenedor-precios p i{
     color:#0e9a00;
+    margin-right: 2%;
+    
 }
 .precios .contenedor-precios a{
     color: #fe4818;
-    padding: 10px 40px;
+    padding: 2% 5%;
     background-color: white;
     border: 2px solid #fe4818;
     text-decoration: none;
     font-weight: bold;
+    text-align: center;
 }
 .precios .contenedor-precios a:hover{
     color: white;
     background-color:#fe4818;
 }
-.testimoniales{
-    height: 600px;
+.mapa{
     width: 100%;
+    height: 500px;
+}
+.testimoniales{
+    height: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
 }
 .testimoniales .encabezado-testimoniales{
+    height: 20%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .testimoniales .contenedor-testimoniales{
-    margin: 20px 40px 50px 40px;
+    height: 80%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 40px;
+    grid-column-gap: 4%;
     justify-content: space-between;
     max-width: 100%;
 }
 .contenedor-testimoniales .testimonial-1 {
-    height: 350px;
+    height: 70%;
     background-color: white;
     border: 1px solid #dcdcdc;
     max-width: 100%;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    padding: 20px 20px;
+    padding: 4% 4%;
     
 }
 .contenedor-testimoniales .testimonial-1 .opinion{
     grid-row: 1/3;
     max-height: 100%;
     display: flex;
-    line-height: 30px;
+    line-height: 170%;
     
 }
 .contenedor-testimoniales .testimonial-1 .persona{
@@ -569,20 +668,20 @@ body .contenedor{
     
 }
 .contenedor-testimoniales .testimonial-2 {
-    height: 350px;
+    height: 70%;
     background-color: white;
     border: 1px solid #dcdcdc;
     max-width: 100%;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    padding: 20px 20px;
+    padding: 4% 4%;
     
 }
 .contenedor-testimoniales .testimonial-2 .opinion{
     grid-row: 1/3;
     max-height: 100%;
     display: flex;
-    line-height: 30px;
+    line-height: 170%;
     
 }
 .contenedor-testimoniales .testimonial-2 .persona{
@@ -594,20 +693,20 @@ body .contenedor{
     
 }
 .contenedor-testimoniales .testimonial-3 {
-    height: 350px;
+    height: 70%;
     background-color: white;
     border: 1px solid #dcdcdc;
     max-width: 100%;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    padding: 20px 20px;
+    padding: 4% 4%;
     
 }
 .contenedor-testimoniales .testimonial-3 .opinion{
     grid-row: 1/3;
     max-height: 100%;
     display: flex;
-    line-height: 30px;
+    line-height: 170%;
     
 }
 .contenedor-testimoniales .testimonial-3 .persona{
@@ -619,27 +718,141 @@ body .contenedor{
     
 }
 .contenedor-testimoniales img{
-    height: 80px;
-    width: 80px;
+    height: 90%;
+    width: 30%;
     border-radius: 50%;
     
 }
 .contenedor-testimoniales i{
     color:#fd4918;
-    font-size: 30px;
+    font-size: 125%;
 }
-.contenedor-testimoniales p{
+.contenedor-testimoniales .opinion p{
     text-align: justify;
-    padding: 0 20px;
+    padding: 0 4%;
+}
+.persona .texto p{
+    padding-left: 5%;
 }
 .persona .texto .nombre{
     color: #fd4918;
-    font-size: 19px;
+    font-size: 100%;
     font-weight: bold;
+}
+.newsletter{
+    margin: 0;
+    height: 600px;
+    width: 100%;
+    background-image: url(../img/bg-inscribir.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.newsletter .parrafo{
+    font-size: 200%;
+    letter-spacing: 1px;
+} 
+.newsletter .titulo{
+    font-size: 590%;
+    text-transform: uppercase;
+}
+.newsletter .boton{
+    margin-top: 5%;
+    font-size: 300%;
+    padding: 1% 4%;
+    border: 5px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -2px;
+    transition: .3s ease-in 
+}
+.newsletter .boton:hover{
+    background-color: #fd4918;
     
 }
+.contador{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 0;
+}
+.contador .encabezado-contador{
+    height: 20%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contador .contenido-contador{
+    height: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contador .contenido-contador .numero{
+    font-size: 300%;
+    color: #fe4818;
+    font-weight: bold;
+    text-align: center;
+}
+.contador .contenido-contador .texto{
+    font-size: 200%;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+.pie{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    background: #353535;
+    color: white;
+    
+    
+}
+.pie .contenido{
+    height: 100%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4%;
+    
+}
+.pie .contenido .item{
+    width: 33,3%;
+    height: 100%;
+}
+.pie .contenido .item p{
+    line-height: 200%;
+}
+.pie .contenido .item span{
+    color:  #fe4818;
+}
+.pie .contenido .item a{
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+    padding: 3%;
+}
+.copy{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100%;
+    background: #2e2e2e;
 
-
+}
 
 
 
