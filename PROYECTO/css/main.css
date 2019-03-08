@@ -96,9 +96,7 @@ textarea {
  /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-:root {
 
-}
 html {
     box-sizing: border-box;
   }
@@ -134,39 +132,14 @@ body .contenedor{
 
 .encabezado{
     height: 100vh;
-}
-/* @media only screen and (min-width: 768px){
-.encabezado{
-    height: 100%;
-}
-}
-@media only screen and (min-width: 320px){
-    .encabezado{
-        height: 100%;
-    }
-    } */
-.encabezado .logo{
     background: url(../img/encabezado.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+.encabezado .logo{
     width: 100%;
-    height: 88%;
-    background-size: 100% 100%;
-    
+    height: 88%;  
 }
-/* 
-@media only screen and (min-width: 768px){
-    .encabezado .logo{
-        background-size: 100%;
-        background-repeat: no-repeat;
-        height: 100%;
-    }
-}
-@media only screen and (min-width: 320px){
-    .encabezado .logo{
-        background-size: 100%;
-        background-repeat: no-repeat;
-        height: 100%;
-    }
-} */
 
 .encabezado .logo .contenedor-iconos-superiores{
     display: flex;
@@ -178,10 +151,12 @@ body .contenedor{
     justify-content: space-between;
     width: 10%;
 }
+
 .encabezado .logo .contenedor-iconos-superiores i{
     color: white;
     text-align: center;  
 }
+
 .encabezado .logo .texto-encabezado{
     margin: 0 auto;
     color:white;
@@ -209,6 +184,7 @@ body .contenedor{
 .texto-encabezado .subtitulo span{
     font-weight: bold;
 }
+
 .barra{
     max-width: 100%;
     height: 12%;
@@ -216,7 +192,7 @@ body .contenedor{
     padding: .8% 2%;
 }    
 .barra .navegacion{
-    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -285,9 +261,9 @@ body .contenedor{
 .hero{
     height: 830px;
     width: 100%;
-    background-image: url(../img/bg-talleres.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: url(../img/bg-talleres.jpg);
+    background-size: cover;
+    background-position: top center;
     display: flex;
     align-items: center;
     
@@ -325,18 +301,9 @@ body .contenedor{
     text-decoration: none;
 }
 .hero .contenido-hero .hero-flex .linea-naranja{
-    background-color: #fe4818;
-    height: 1px;
     width: 100%;
-    margin-top: 15px;
-    background-size: 100%;
-    padding: 0 0px;
+    height: 50px;
 }
-.hero .contenido-hero .hero-flex .linea-naranja img{
-    margin-top: -15px;
-    margin-left: 100px;
-}
-/* LINEA NARANJA */
 .hero .hero-flex .contenedor-talleres{
     display: flex;
     flex-direction: column;
@@ -403,6 +370,7 @@ body .contenedor{
 .invitados .fotos-invitados .inv-1{
     background-image: url(../img/invitado1.jpg);
     background-size: cover;
+    background-position: top center;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -417,6 +385,7 @@ body .contenedor{
 .invitados .fotos-invitados .inv-2{
     background-image: url(../img/invitado2.jpg);
     background-size: cover;
+    background-position: top center;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -431,6 +400,7 @@ body .contenedor{
 .invitados .fotos-invitados .inv-3{
     background-image: url(../img/invitado3.jpg);
     background-size: cover;
+    background-position: top center;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -445,6 +415,7 @@ body .contenedor{
 .invitados .fotos-invitados .inv-4{
     background-image: url(../img/invitado4.jpg);
     background-size: cover;
+    background-position: top center;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -459,6 +430,7 @@ body .contenedor{
 .invitados .fotos-invitados .inv-5{
     background-image: url(../img/invitado5.jpg);
     background-size: cover;
+    background-position: top center;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -473,6 +445,7 @@ body .contenedor{
 .invitados .fotos-invitados .inv-6{
     background-image: url(../img/invitado6.jpg);
     background-size: cover;
+    background-position: top center;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -487,8 +460,9 @@ body .contenedor{
 .resumen{
     height: 600px;
     width: 100%;
-    background-image: url(../img/bg-resumen.jpg);
-    background-size: 100% 100%;
+    background: url(../img/bg-resumen.jpg);
+    background-size: cover;
+    background-position: center;
     margin-top: 5%;
     display: flex;
     flex-direction: column;
@@ -743,8 +717,9 @@ body .contenedor{
     margin: 0;
     height: 600px;
     width: 100%;
-    background-image: url(../img/bg-inscribir.jpg);
-    background-size: 100% 100%;
+    background: url(../img/bg-inscribir.jpg);
+    background-size: cover;
+    background-position: top center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -853,10 +828,172 @@ body .contenedor{
     background: #2e2e2e;
 
 }
+/* EMPEZAMOS CONFERENCIA.HTML */
+.galeria{
+    height: 500px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.galeria .encabezado-galeria{
+    height: 20%;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    .encabezado {
+        height: 80%;
+    }
+    .encabezado .logo .texto-encabezado  {
+        width: 70%;
+        height: 50vh;
+        font-size: 70%;}
+
+    .encabezado .logo .contenedor-iconos-superiores .iconos-superiores {
+        width: 50%;
+    }
+    .barra {
+        width: 100%;
+        height: 20vh;
+    }
+    .barra .navegacion {
+        display:flex;
+        flex-direction: column;  
+        justify-content: center;
+        height: 20vh;
+        padding: 0;    
+    }
+    .barra .navegacion .link-titulo  {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 150%;
+        text-align: center;
+        justify-content: space-between;
+        
+    }
+    .barra .navegacion .link-nav  {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 100%;
+        text-align: center;
+        justify-content: space-between;
+        height: 50%;
+        
+    }
+    .barra .navegacion .link-nav .reservas {
+        padding: 0;
+        border: none;     
+    }
+    .intro{
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+    }
+    .intro .contenedor-intro{
+        width: 90%;
+    }
+    .intro .contenedor-intro h1{
+        font-size: 150%;
+    }
+    .intro .contenedor-intro p{
+        font-size: 100%;
+    }
+    .hero .contenido-hero{
+        height: 50%;
+    }
+    .hero .contenido-hero .hero-flex h1{
+        font-size: 125%;
+    }
+    .hero .contenido-hero .hero-flex img{
+        width: 20%;
+    }
+    .hero .contenido-hero .hero-flex .iconos-programa{
+        font-size: 70%;
+    }
+    .hero .contenido-hero .hero-flex .linea-naranja img{
+        width: 100%;
+        height: 40px;
+    }
+    .invitados .fotos-invitados div{
+        font-size: 70%;
+    }
+    .resumen{
+        height: 30vh;
+        
+    }
+    .precios .contenedor-precios .titulo{
+        font-size: 120%;
+    }
+    .precios .contenedor-precios p{
+        font-size: 70%;
+    }
+    .testimoniales .contenedor-testimoniales .opinion{
+        font-size: 90%;
+        line-height: 1.2;
+        text-align: initial;
+    }
+    .testimoniales .contenedor-testimoniales .persona img{
+        height: 65%;
+    }
+    .pie{
+        height: 25vh;
+    }
+    .pie .contenido .item h4{
+        font-size: 110%;
+    }
+    .pie .contenido .item p{
+        font-size: 75%;
+    }
+    .pie .contenido .item i{
+        font-size: 75%;
+    }
+    
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
