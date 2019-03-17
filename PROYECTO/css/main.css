@@ -1,6 +1,6 @@
 /*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
 
-/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/* main.css 1.0.0 | MIT License | https://github.com/hoverbp/main.css#readme */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -121,6 +121,11 @@ h4{
     text-transform: uppercase;
     font-size: 200%;
 }
+h5{
+    color: #fe4818;
+    font-size: 150%;
+}
+
 body{
    max-width: 100%;
 }
@@ -588,6 +593,19 @@ body .contenedor{
     color: white;
     background-color:#fe4818;
 }
+.precios .contenedor-precios .entradas{
+    font-size: 100%;
+    font-weight: bold;
+}
+.precios .contenedor-precios .entradas{
+    display: flex;
+    justify-content: center;
+}
+.precios .contenedor-precios .entradas input{
+    width: 50%;
+    margin-bottom: 2%;
+    
+}
 .mapa{
     width: 100%;
     height: 500px;
@@ -919,6 +937,158 @@ body .contenedor{
     color: #fe4818;
     padding-right: 5%;
 }
+
+
+/* REGISTRO */
+.formulario{
+    margin-top: 6%;
+    height: 2400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario .encabezado-formulario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.formulario .contenido-formulario{
+    width: 90%;
+    height: 100%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.formulario .contenido-formulario .datos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    height: 8%;
+    background-color: white;
+}
+.formulario .datos .campo{
+    width: 33%;
+    padding-left: 4%;
+}
+
+.formulario .contenido-formulario .dia{
+    height:300px;
+    width: 100%;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15% 85%;
+    grid-column-gap: 7%;
+    grid-row-gap: 7%;
+    
+}
+.formulario .contenido-formulario .dia .dia-linea{
+    height: 60%;
+    
+    grid-column: 1/ 4;
+    text-align: center;
+    font-size: 100%;
+    border-bottom: solid 1px brown; 
+    margin-top: 3%;
+    font-weight: bold;
+
+}
+.formulario .contenido-formulario .dia .seccion{
+    height: 85%;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-right: 7%;
+    margin-left: 5%;
+    line-height: 1.8;
+    
+}
+.formulario .contenido-formulario .dia .seccion p{
+    font-size: 95%;
+    font-weight: bold;
+    padding-bottom: 2%;
+    
+}
+.seccion label time{
+    color: #fe4818;
+    padding-left: 2%;
+    padding-right: 1%;
+    font-weight: bold;
+}
+.formulario .contenido-formulario .pago{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.formulario .contenido-formulario .pago .seccion{
+    margin: 0 5%;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pago .seccion .item{
+    width:100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+.pago .seccion .item label{
+    font-size: 100%;
+    font-weight: bold;
+}
+.pago .seccion .item input{
+    width: 50%;
+}
+.pago .seccion .regalo{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.pago .seccion .regalo .regalo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pago button{
+    
+    text-transform: uppercase;
+    padding: 2% 5%;
+    background-color: #fe4818;
+    color: white;
+    border: solid 3px #fe4818;
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+.pago button:hover{
+    background-color: white;
+    color: #fe4818;
+}
+.pago .seccion .pago{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pago .seccion .pago p{
+    line-height: 1.8;
+    font-size: 100%;
+    font-weight: bold;
+}
 /* RESPONSIVE */
 
 @media (max-width: 768px){
@@ -1010,6 +1180,7 @@ body .contenedor{
     .precios .contenedor-precios p{
         font-size: 70%;
     }
+    
     .testimoniales .contenedor-testimoniales .opinion{
         font-size: 90%;
         line-height: 1.2;
@@ -1035,7 +1206,10 @@ body .contenedor{
     .galeria .contenido-galeria img{
         height: 30%;
     }
-    /* RESPONSIVE CALENDARIO */
+    /* registro */
+    .pago .seccion .calcular{
+        width: 50%;
+    }
 
 
 
