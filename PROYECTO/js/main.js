@@ -21,6 +21,7 @@
         const calcular= document.querySelector(".calcular");
         const pagar= document.querySelector(".pagar");
 
+        
         //CALCULAR
         
         calcular.addEventListener("click", calcularSuma);
@@ -31,81 +32,46 @@
                 alert("Debes elegir un regalo");
             }
             else{
+                //Extras + entradas
                 let entradas1dia= un_dia.value;
                 let entradas2dias= dos_dias.value;
                 let entradas3dias= tres_dias.value;
-
-                let sumaEntradas= function(a, b, c){
-                    return(a*30+b*45+c*50);
-                }
-                let totalEntradas= sumaEntradas(entradas1dia, entradas2dias, entradas3dias);
-                
-                
-                
-                
-
-
-            //Extras + entradas
-                
                 let totalCamisetas= camiseta.value;
                 let totalEtiquetas= etiqueta.value;
+                let camisetasDescuento= totalCamisetas*10-(totalCamisetas*10*0.07);
                 
-
-                let operacionTotal= function(a, b, c){
-                    return (b*(10-(7*10/100))+a+c*5)
-                
-                }   
-                let resultadoTotal= operacionTotal(totalEntradas, totalCamisetas, totalEtiquetas);
-                
-                let nuevoTotalp= document.createElement(`p`);
-                let nuevoTotal= document.createTextNode(`TOTAL: ${resultadoTotal} $`);
-                nuevoTotalp.appendChild(nuevoTotal);
-                
-                const viejoTotal= document.querySelector(".seccion .pago .total");
-                viejoTotal.parentNode.replaceChild(nuevoTotalp, viejoTotal);
-
+                let total= entradas1dia*30+entradas2dias*45+entradas3dias*50+totalEtiquetas*5+camisetasDescuento;
+                let totalImprimir= document.querySelector(".total");
+                totalImprimir.innerHTML=(`TOTAL: ${total}`);
 
                 
-                let resumenNuevoli= document.createElement("li");
-                let resumenNuevo= document.createTextNode(`Entradas 1 dia: ${entradas1dia}`);
-                resumenNuevoli.appendChild(resumenNuevo);
+                //RESUMEN 
+                  
+                let resumen=[];
+                let resumenImprimir= document.querySelector(".lista");
+                resumen.push(`Entradas un dia: ${entradas1dia}`);
+                resumen.push(`Entradas dos dias: ${entradas2dias}`);
+                resumen.push(`Entradas tres dias: ${entradas3dias}`);
+                resumen.push(`Camisetas: ${totalCamisetas}`);
+                resumen.push(`Etiquetas: ${totalEtiquetas}`);
 
-                let resumenViejo= document.querySelector(".lista ul");
-                resumenViejo.appendChild(resumenNuevoli);
-
-                let resumenNuevoli2= document.createElement("li");
-                let resumenNuevo2= document.createTextNode(`Entradas 2 dias: ${entradas2dias}`);
-                resumenNuevoli2.appendChild(resumenNuevo2);
-                resumenViejo.appendChild(resumenNuevoli2);
-
-                let resumenNuevoli3= document.createElement("li");
-                let resumenNuevo3= document.createTextNode(`Entradas 3 dias: ${entradas3dias}`);
-                resumenNuevoli3.appendChild(resumenNuevo3);
-                resumenViejo.appendChild(resumenNuevoli3);
-
-                let resumenNuevoli4= document.createElement("li");
-                let resumenNuevo4= document.createTextNode(`Camisetas: ${totalCamisetas}`);
-                resumenNuevoli4.appendChild(resumenNuevo4);
-                resumenViejo.appendChild(resumenNuevoli4);
-
-                let resumenNuevoli5= document.createElement("li");
-                let resumenNuevo5= document.createTextNode(`Etiquetas: ${totalEtiquetas}`);
-                resumenNuevoli5.appendChild(resumenNuevo5);
-                resumenViejo.appendChild(resumenNuevoli5);
-
-                
-                
-                
-
-                
-
-                
-
-
-                
-                
+                for (let i= 0; i <resumen.length; i++){
+                    resumenImprimir.innerHTML=`Tu lista: </br> ${resumen[i]}`;
+                    console.log(resumen[i]);
+                    
+                }    
              }
-         }   
+         }
+         const viernes= document.querySelector("#viernes");
+
+
+         un_dia.addEventListener("blur", ocultar);
+         dos_dias.addEventListener("blur", ocultar); 
+         tres_dias.addEventListener("blur", ocultar);
+         
+         function ocultar(){
+            
+         }
         
         
         
