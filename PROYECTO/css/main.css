@@ -945,12 +945,15 @@ body .contenedor{
 
 #viernes{
     display:none;
+    width: 100%;
 }
 #sabado{
     display:none;
+    width: 100%;
 }
 #domingo{
     display:none;
+    width: 100%;
 }
 .formulario{
     margin-top: 6%;

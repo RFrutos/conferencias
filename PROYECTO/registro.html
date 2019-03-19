@@ -75,15 +75,15 @@
                 <form action="" class="datos">
                     <div class="campo">
                         <label for="nombre" class="nombre">Nombre</label>
-                        <input class="nombre" size= "10" type="text" placeholder="Tu nombre">
+                        <input id="nombre" value="" size= "10" type="text" placeholder="Tu nombre">
                     </div>
                     <div class="campo">
                             <label for="apellidos" class="apellidos">Apellidos</label>
-                            <input class="apellidos" size= "10" type="text" placeholder="Tus apellidos">
+                            <input id="apellidos" size= "10" type="text" placeholder="Tus apellidos">
                     </div>
                     <div class="campo">
                             <label for="email" class="email">email</label>
-                            <input class="email" size= "10" type="email" placeholder="Tu email">
+                            <input id="email" size= "10" type="email" required="required" placeholder="Tu email">
                     </div>
                 </form>
                 <h5>ELIGE EL NÚMERO DE BOLETOS</h5>
@@ -131,69 +131,74 @@
                   </div>
                 </section>
                 <h5>ELIGE TUS TALLERES</h5>
-                <form action="" id="viernes" class="dia">
-                  <p class="dia-linea">Viernes</p>
-                  <div class="seccion"><p>Talleres:</p>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t1"><time>10:00</time>Responsive Web Design</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t2"><time>11:00</time>HTML5</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t3"><time>12:00</time>CSS3</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t4"><time>13:00</time>JAVASCRIPT</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t5"><time>14:00</time>ANGULAR</label>
-                  </div>
-                  
-                  <div class="seccion"><p>Conferencias:</p>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c1"><time>10:00</time>Responsive Web Design</label>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c2"><time>11:00</time>React</label>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c3"><time>12:00</time>HTML5</label>
-                  </div>
-                  
-                  <div class="seccion"><p>Seminarios:</p>
-                    <label for="seminarios" class="seminarios"><input type="checkbox" class="s1"><time>10:00</time>Responsive Web Design</label>
-                  </div>
-
+                <div id="viernes">
+                  <form action="" class="dia">
+                    <p class="dia-linea">Viernes</p>
+                    <div class="seccion"><p>Talleres:</p>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t1"><time>10:00</time>Responsive Web Design</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t2"><time>11:00</time>HTML5</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t3"><time>12:00</time>CSS3</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t4"><time>13:00</time>JAVASCRIPT</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t5"><time>14:00</time>ANGULAR</label>
+                    </div>
+                    
+                    <div class="seccion"><p>Conferencias:</p>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c1"><time>10:00</time>Responsive Web Design</label>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c2"><time>11:00</time>React</label>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c3"><time>12:00</time>HTML5</label>
+                    </div>
+                    
+                    <div class="seccion"><p>Seminarios:</p>
+                      <label for="seminarios" class="seminarios"><input type="checkbox" class="s1"><time>10:00</time>Responsive Web Design</label>
+                    </div>
+                </div>
                 </form>
-                <form action="" id="sabado" class="dia">
-                  <p class="dia-linea">Sabado</p>
-                  <div class="seccion"><p>Talleres:</p>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t6"><time>10:00</time>Responsive Web Design</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t7"><time>11:00</time>HTML5</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t8"><time>12:00</time>CSS3</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t9"><time>13:00</time>JAVASCRIPT</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t10"><time>14:00</time>ANGULAR</label>
-                  </div>
-                  
-                  <div class="seccion"><p>Conferencias:</p>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c4"><time>10:00</time>Responsive Web Design</label>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c5"><time>11:00</time>React</label>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c6"><time>12:00</time>HTML5</label>
-                  </div>
-                  
-                  <div class="seccion"><p>Seminarios:</p>
-                    <label for="seminarios" class="seminarios"><input type="checkbox" class="s2"><time>10:00</time>Responsive Web Design</label>
-                  </div>
+                <div id="sabado">
+                  <form action=""  class="dia">
+                    <p class="dia-linea">Sabado</p>
+                    <div class="seccion"><p>Talleres:</p>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t6"><time>10:00</time>Responsive Web Design</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t7"><time>11:00</time>HTML5</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t8"><time>12:00</time>CSS3</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t9"><time>13:00</time>JAVASCRIPT</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t10"><time>14:00</time>ANGULAR</label>
+                    </div>
+                    
+                    <div class="seccion"><p>Conferencias:</p>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c4"><time>10:00</time>Responsive Web Design</label>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c5"><time>11:00</time>React</label>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c6"><time>12:00</time>HTML5</label>
+                    </div>
+                    
+                    <div class="seccion"><p>Seminarios:</p>
+                      <label for="seminarios" class="seminarios"><input type="checkbox" class="s2"><time>10:00</time>Responsive Web Design</label>
+                    </div>
 
-                </form>
-                <form action="" id="domingo" class="dia">
-                  <p class="dia-linea">Domingo</p>
-                  <div class="seccion"><p>Talleres:</p>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t11"><time>10:00</time>Responsive Web Design</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t12"><time>11:00</time>HTML5</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t13"><time>12:00</time>CSS3</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t14"><time>13:00</time>JAVASCRIPT</label>
-                    <label for="talleres" class="talleres"><input type="checkbox" class="t15"><time>14:00</time>ANGULAR</label>
-                  </div>
-                  
-                  <div class="seccion"><p>Conferencias:</p>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c7"><time>10:00</time>Responsive Web Design</label>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c8"><time>11:00</time>React</label>
-                    <label for="conferencias" class="conferencias"><input type="checkbox" class="c9"><time>12:00</time>HTML5</label>
-                  </div>
-                  
-                  <div class="seccion"><p>Seminarios:</p>
-                    <label for="seminarios" class="seminarios"><input type="checkbox" class="s3"><time>10:00</time>Responsive Web Design</label>
-                  </div>
+                  </form>
+                </div> 
+                <div id="domingo">
+                  <form action="" class="dia">
+                    <p class="dia-linea">Domingo</p>
+                    <div class="seccion"><p>Talleres:</p>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t11"><time>10:00</time>Responsive Web Design</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t12"><time>11:00</time>HTML5</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t13"><time>12:00</time>CSS3</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t14"><time>13:00</time>JAVASCRIPT</label>
+                      <label for="talleres" class="talleres"><input type="checkbox" class="t15"><time>14:00</time>ANGULAR</label>
+                    </div>
+                    
+                    <div class="seccion"><p>Conferencias:</p>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c7"><time>10:00</time>Responsive Web Design</label>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c8"><time>11:00</time>React</label>
+                      <label for="conferencias" class="conferencias"><input type="checkbox" class="c9"><time>12:00</time>HTML5</label>
+                    </div>
+                    
+                    <div class="seccion"><p>Seminarios:</p>
+                      <label for="seminarios" class="seminarios"><input type="checkbox" class="s3"><time>10:00</time>Responsive Web Design</label>
+                    </div>
 
-                </form>
+                  </form>
+                </div>    
                 <h5>PAGO Y EXTRAS</h5>
                 <form action="" class="pago">
                   <div class="seccion">

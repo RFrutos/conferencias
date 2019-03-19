@@ -7,9 +7,9 @@
 
         // variables
 
-        const nombre= document.querySelector(".nombre");
-        const apellidos= document.querySelector(".apellidos");
-        const email= document.querySelector(".email");
+        const nombre= document.getElementById("nombre");
+        const apellidos= document.getElementById("apellidos");
+        const email= document.getElementById("email");
 
         let un_dia= document.querySelector(".un-dia .numero-entradas");
         let dos_dias= document.querySelector(".dos-dias .numero-entradas");
@@ -22,15 +22,31 @@
         const pagar= document.querySelector(".pagar");
 
         
+
+        
         //CALCULAR
         
         calcular.addEventListener("click", calcularSuma);
-
+        
         function calcularSuma(event){
             event.preventDefault();
             if(regalos.value === " "){
-                alert("Debes elegir un regalo");
+                alert("Debes elegir un regalo");    
             }
+            if(nombre.value === ""){
+                alert("Nombre es obligatorio");
+                nombre.style.border= "solid 2px red"; 
+            }
+            if(apellidos.value === ""){
+                alert("Apellidos es obligatorio");
+                apellidos.style.border= "solid 2px red"; 
+            }
+            if(email.value === ""){
+                alert("email es obligatorio");
+                email.style.border= "solid 2px red"; 
+            }
+            
+            
             else{
                 //Extras + entradas
                 let entradas1dia= un_dia.value;
@@ -59,25 +75,53 @@
                     resumenImprimir.innerHTML=`Tu lista: </br> ${resumen[i]}`;
                     console.log(resumen[i]);
                     
-                }    
+                }
+                
+                
+                
              }
+
          }
-         const viernes= document.querySelector("#viernes");
 
 
-         un_dia.addEventListener("blur", ocultar);
-         dos_dias.addEventListener("blur", ocultar); 
-         tres_dias.addEventListener("blur", ocultar);
+         //OCULTAR
+         const viernes= document.getElementById("viernes");
+         const sabado= document.getElementById("sabado");
+         const domingo= document.getElementById("domingo");
          
-         function ocultar(){
+
+         un_dia.addEventListener("blur", ocultarV);
+         dos_dias.addEventListener("blur", ocultarVS); 
+         tres_dias.addEventListener("blur", ocultarVSD);
+         
+        function ocultarV(){
+            if(un_dia.value > 0){
+                viernes.style.display= "grid";
+          }
+        }
+        function ocultarVS(){
+            if(dos_dias.value > 0){
+                viernes.style.display= "grid";
+                sabado.style.display= "grid";
+          }
+        }
+        function ocultarVSD(){
+            if(tres_dias.value > 0){
+                viernes.style.display= "grid";
+                sabado.style.display= "grid";
+                domingo.style.display= "grid";
+          }
+        }
+
+        
+        
+        
+        //Campos obligatorios
+
+
             
-         }
         
-        
-        
-        
-        
-        
+            
         
         
 
