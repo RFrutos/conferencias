@@ -271,39 +271,71 @@ body .contenedor{
     background-position: top center;
     display: flex;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     
+}
+.hero .encabezado-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    width: 50%;
+    padding-top: 5%;
+    height:30%;
+}
+.hero .encabezado-hero h1{
+    text-align: center;
+    
+}
+.hero .encabezado-hero .iconos-programa{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 3%;
+}
+.hero .encabezado-hero .iconos-programa  button{
+    padding-left: 5%;
+    color:#6b6b6b;
+    font-size: 130%;
+    font-weight: bold;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    width: 30%;
+    display: flex;
+
+}
+.hero .encabezado-hero .iconos-programa  i{
+    color: #fe4818;
+}
+.hero .encabezado-hero .iconos-programa  p{
+    font-size: 100%;
+    color: black;
+    padding-left: 5%;
 }
 .hero .contenido-hero{
     background: rgba(253, 251, 251, 0.3);
-    height: 70%;
+    height: 60%;
     width: 50%;
     padding-left: 5%;
-    
+}
+.hero .contenido-hero #contenido-talleres{
+    display: flex;
+}
+.hero .contenido-hero #contenido-conferencias{
+    display: none;
+}
+.hero .contenido-hero #contenido-seminarios{
+    display: none;
 }
 .hero .contenido-hero .hero-flex{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 3%;
-}
-.hero .contenido-hero .hero-flex h1{
-    margin-top: 3%;
-}
-.hero .contenido-hero .hero-flex .iconos-programa{
-    margin-top: 3%; 
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.hero-flex .iconos-programa i{
-    color: #fe4818;
-}
-.iconos-programa i a{
-    padding-left: 5%;
-    color:#6b6b6b;
-    font-size: 140%;
-    font-weight: bold;
-    text-decoration: none;
 }
 .hero .contenido-hero .hero-flex .linea-naranja{
     width: 100%;
@@ -340,12 +372,13 @@ body .contenedor{
     margin-top: 8%;
     width: 100%;
 }
-.contenido-hero .hero-flex .ver-todos a{
+.contenido-hero .hero-flex #ver-todos {
     padding: 2% 5%;
     text-decoration: none;
     background-color: #fe4818;
     color: white;
     font-weight: bold;
+    font-size: 100%;
 }
 .invitados{
     width: 100%;

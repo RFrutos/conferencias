@@ -116,7 +116,44 @@
         
         
         
-        //Campos obligatorios
+        //Ocultar talleres seminarios y conferencias de index.
+
+        const btnTalleres= document.querySelector(".talleres");
+        const btnConferencias= document.querySelector(".conferencias");
+        const btnSeminarios= document.querySelector(".seminarios");
+        const btnVerTodos= document.getElementById("ver-todos");
+
+
+        const contenidoTalleres= document.getElementById("contenido-talleres");
+        const contenidoConferencias= document.getElementById("contenido-conferencias");
+        const contenidoSeminarios= document.getElementById("contenido-seminarios");
+
+
+        btnTalleres.addEventListener("click", mostrarT)
+
+        function mostrarT(){
+            contenidoTalleres.style.display= "flex";
+            contenidoConferencias.style.display= "none";
+            contenidoSeminarios.style.display= "none";
+        }
+
+        btnConferencias.addEventListener("click", mostrarC)
+
+        function mostrarC(){
+            contenidoTalleres.style.display= "none";
+            contenidoConferencias.style.display= "flex";
+            contenidoSeminarios.style.display= "none";
+        }
+
+        btnSeminarios.addEventListener("click", mostrarS)
+
+        function mostrarS(){
+            contenidoTalleres.style.display= "none";
+            contenidoConferencias.style.display= "none";
+            contenidoSeminarios.style.display= "flex";
+        }
+
+
 
 
             

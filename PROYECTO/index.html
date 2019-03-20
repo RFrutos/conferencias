@@ -76,15 +76,18 @@
       </div>
     </section>
     <section class="hero">
-      <div class="contenido-hero">
-        <div class="hero-flex">
+      <div class="encabezado-hero">
           <h1>Programa del evento</h1>
           <img src="img/separador.png" alt="separador">
           <div class="iconos-programa">
-              <i class="fas fa-code"><a href="#">Talleres</a></i>
-              <i class="fas fa-comments"><a href="#">Conferencias</a></i>
-              <i class="fas fa-landmark"><a href="#">Seminarios</a></i>
+              <button class="talleres"><i class="fas fa-code"></i><p>Talleres</p></button>
+              <button class="conferencias"><i class="fas fa-comments"></i><p>Conferencias</p></button>
+              <button class= seminarios><i class="fas fa-landmark"></i><p>Seminarios</p></button>
           </div>
+      </div>
+      <div class="contenido-hero">
+        <div id="contenido-talleres" class="hero-flex">
+          
           <div class="linea-naranja"><img src="img/linea naranja talleres.jpg" alt="flecha"></div>
           <div class="contenedor-talleres">
             <div class="contenido-1">
@@ -102,7 +105,50 @@
             </div>
           </div>
           <div class="ver-todos">
-            <a href="#">VER TODOS</a>
+            <button id="ver-todos">VER TODOS</button>
+          </div>    
+        </div>
+        <div id="contenido-conferencias" class="hero-flex">
+          
+          <div class="linea-naranja"><img src="img/linea naranja conferencia.jpg" alt="flecha"></div>
+          <div class="contenedor-talleres">
+            <div class="contenido-1">
+              <h3>React y Angular</h3>
+              <p><i class="far fa-clock"></i>14:00 hrs</p>
+              <p><i class="far fa-calendar-alt"></i>11 de Dic</p>
+              <p><i class="fas fa-user-alt"></i>Juan Carlos Frutos</p>
+            </div>
+            <div class="linea-negra"></div>
+            <div class="contenido-2">
+              <h3>Responsive web design</h3>
+              <p><i class="far fa-clock"></i>14:00 hrs</p>
+              <p><i class="far fa-calendar-alt"></i>11 de Dic</p>
+              <p><i class="fas fa-user-alt"></i>Juan Pablo De la torre</p>
+            </div>
+          </div>
+          <div class="ver-todos">
+            <button id="ver-todos">VER TODOS</button>
+          </div>    
+        </div>
+        <div id="contenido-seminarios" class="hero-flex">
+          <div class="linea-naranja"><img src="img/linea naranja seminario.jpg" alt="flecha"></div>
+          <div class="contenedor-talleres">
+            <div class="contenido-1">
+              <h3>Google nos espia</h3>
+              <p><i class="far fa-clock"></i>14:00 hrs</p>
+              <p><i class="far fa-calendar-alt"></i>12 de Dic</p>
+              <p><i class="fas fa-user-alt"></i>Pepe Luis</p>
+            </div>
+            <div class="linea-negra"></div>
+            <div class="contenido-2">
+              <h3>Responsive web design</h3>
+              <p><i class="far fa-clock"></i>14:00 hrs</p>
+              <p><i class="far fa-calendar-alt"></i>12 de Dic</p>
+              <p><i class="fas fa-user-alt"></i>Juan Pablo De la torre</p>
+            </div>
+          </div>
+          <div class="ver-todos">
+            <button id="ver-todos">VER TODOS</button>
           </div>    
         </div>  
       </div>
