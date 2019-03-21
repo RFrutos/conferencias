@@ -25,7 +25,10 @@
 
         
         //CALCULAR
-        
+        if(calcular === null){
+
+        }
+        else{
         calcular.addEventListener("click", calcularSuma);
         
         function calcularSuma(event){
@@ -61,8 +64,8 @@
                 totalImprimir.innerHTML=(`TOTAL: ${total}`);
 
                 
-                //RESUMEN 
-                  
+                //RESUMEN //solo se muestra el valor de etiquetas aunque en la consola se muestra bien
+                
                 let resumen=[];
                 let resumenImprimir= document.querySelector(".lista");
                 resumen.push(`Entradas un dia: ${entradas1dia}`);
@@ -71,9 +74,9 @@
                 resumen.push(`Camisetas: ${totalCamisetas}`);
                 resumen.push(`Etiquetas: ${totalEtiquetas}`);
 
-                for (let i= 0; i <resumen.length; i++){
-                    resumenImprimir.innerHTML=`Tu lista: </br> ${resumen[i]}`;
-                    console.log(resumen[i]);
+                for (let i= 0; i <resumen.length; i++){  
+                resumenImprimir.innerHTML=`Tu lista: </br> ${resumen[i]}`;
+                console.log(resumen[i]);
                     
                 }
                 
@@ -82,37 +85,51 @@
              }
 
          }
-
-
-         //OCULTAR
+        }
+        
+         //OCULTAR //consigo que lo muestre pero no que lo oculte si el valor vuelve a ser 0
          const viernes= document.getElementById("viernes");
          const sabado= document.getElementById("sabado");
          const domingo= document.getElementById("domingo");
+        
          
-
-         un_dia.addEventListener("blur", ocultarV);
-         dos_dias.addEventListener("blur", ocultarVS); 
-         tres_dias.addEventListener("blur", ocultarVSD);
-         
-        function ocultarV(){
+        
+        if(un_dia === null){}
+        else{
+            un_dia.addEventListener("change", ocultarV);
+            function ocultarV(){
             if(un_dia.value > 0){
                 viernes.style.display= "grid";
-          }
+        }   
+            
+            if(un_dia.value === 0){ 
+                viernes.style.display= "none";
+            }
         }
-        function ocultarVS(){
-            if(dos_dias.value > 0){
-                viernes.style.display= "grid";
-                sabado.style.display= "grid";
-          }
         }
-        function ocultarVSD(){
-            if(tres_dias.value > 0){
-                viernes.style.display= "grid";
-                sabado.style.display= "grid";
-                domingo.style.display= "grid";
-          }
+        if(dos_dias === null){}
+        else{
+            dos_dias.addEventListener("change", ocultarVS);
+            function ocultarVS(){
+                if(dos_dias.value > 0){
+                    viernes.style.display= "grid";
+                    sabado.style.display= "grid";
+            }
+            }
         }
-
+        if(tres_dias === null){}
+        else{
+            tres_dias.addEventListener("change", ocultarVSD);
+                function ocultarVSD(){
+                    if(tres_dias.value > 0){
+                        viernes.style.display= "grid";
+                        sabado.style.display= "grid";
+                        domingo.style.display= "grid";
+                    }
+                }
+        }
+        
+        
         
         
         
@@ -121,7 +138,7 @@
         const btnTalleres= document.querySelector(".talleres");
         const btnConferencias= document.querySelector(".conferencias");
         const btnSeminarios= document.querySelector(".seminarios");
-        const btnVerTodos= document.getElementById("ver-todos");
+        
 
 
         const contenidoTalleres= document.getElementById("contenido-talleres");
@@ -155,8 +172,6 @@
 
 
 
-
-            
         
             
         

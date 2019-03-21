@@ -369,16 +369,18 @@ body .contenedor{
 .contenido-hero .hero-flex .ver-todos{
     display: flex;
     justify-content: flex-end;
-    margin-top: 8%;
-    width: 100%;
+    width: 50%;
+    height: 20%;
+    margin-top: 5%;
 }
-.contenido-hero .hero-flex #ver-todos {
-    padding: 2% 5%;
+.contenido-hero .hero-flex .ver-todos a {
+    padding: 2% 7%;
     text-decoration: none;
     background-color: #fe4818;
     color: white;
     font-weight: bold;
     font-size: 100%;
+    
 }
 .invitados{
     width: 100%;
@@ -794,7 +796,9 @@ body .contenedor{
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: -2px;
-    transition: .3s ease-in 
+    transition: .3s ease-in; 
+    text-decoration: none;
+    color: white;
 }
 .newsletter .boton:hover{
     background-color: #fd4918;
