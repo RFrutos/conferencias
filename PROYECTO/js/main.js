@@ -48,15 +48,13 @@
                 alert("email es obligatorio");
                 email.style.border= "solid 2px red"; 
             }
-            
-            
             else{
                 //Extras + entradas
-                let entradas1dia= un_dia.value;
-                let entradas2dias= dos_dias.value;
-                let entradas3dias= tres_dias.value;
-                let totalCamisetas= camiseta.value;
-                let totalEtiquetas= etiqueta.value;
+                let entradas1dia= parseInt(un_dia.value);
+                let entradas2dias= parseInt(dos_dias.value);
+                let entradas3dias= parseInt(tres_dias.value);
+                let totalCamisetas= parseInt(camiseta.value);
+                let totalEtiquetas= parseInt(etiqueta.value);
                 let camisetasDescuento= totalCamisetas*10-(totalCamisetas*10*0.07);
                 
                 let total= entradas1dia*30+entradas2dias*45+entradas3dias*50+totalEtiquetas*5+camisetasDescuento;
@@ -79,12 +77,25 @@
                 console.log(resumen[i]);
                     
                 }
-                
+                email.addEventListener("change", cambiarMail);
+
+
+
+        //  ESTO DEBERIA VALIDAR UN MAIL CORRECTO PERO NO HACE NADA 
+        //         function cambiarMail(){
+        //             if("@" === null){
+        //                 alert("email incorrecto");
+        //                 email.style.border= "solid 2px red";
+        //     }
+        // }
                 
                 
              }
 
          }
+        
+        
+
         }
         
          //OCULTAR //consigo que lo muestre pero no que lo oculte si el valor vuelve a ser 0
