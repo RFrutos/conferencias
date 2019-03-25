@@ -1,3 +1,7 @@
+function clean(selector){
+    let objeto= document.querySelector(selector);
+    objeto.innerHTML= "";
+}
 (function() {
     "use strict";
     let regalos= document.querySelector(".regalos");
@@ -25,79 +29,79 @@
 
         
         //CALCULAR
-        if(calcular === null){
-
-        }
-        else{
-        calcular.addEventListener("click", calcularSuma);
-        
-        function calcularSuma(event){
-            event.preventDefault();
-            if(regalos.value === " "){
-                alert("Debes elegir un regalo");    
+        if(calcular !== null){
+            calcular.addEventListener("click", calcularSuma);
+             
+            function validateEmail(email) {
+                let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
             }
-            if(nombre.value === ""){
-                alert("Nombre es obligatorio");
-                nombre.style.border= "solid 2px red"; 
-            }
-            if(apellidos.value === ""){
-                alert("Apellidos es obligatorio");
-                apellidos.style.border= "solid 2px red"; 
-            }
-            if(email.value === ""){
-                alert("email es obligatorio");
-                email.style.border= "solid 2px red"; 
-            }
-            else{
-                //Extras + entradas
-                let entradas1dia= parseInt(un_dia.value);
-                let entradas2dias= parseInt(dos_dias.value);
-                let entradas3dias= parseInt(tres_dias.value);
-                let totalCamisetas= parseInt(camiseta.value);
-                let totalEtiquetas= parseInt(etiqueta.value);
-                let camisetasDescuento= totalCamisetas*10-(totalCamisetas*10*0.07);
-                
-                let total= entradas1dia*30+entradas2dias*45+entradas3dias*50+totalEtiquetas*5+camisetasDescuento;
-                let totalImprimir= document.querySelector(".total");
-                totalImprimir.innerHTML=(`TOTAL: ${total}`);
-
-                
-                //RESUMEN //solo se muestra el valor de etiquetas aunque en la consola se muestra bien
-                
-                let resumen=[];
-                let resumenImprimir= document.querySelector(".lista");
-                resumen.push(`Entradas un dia: ${entradas1dia}`);
-                resumen.push(`Entradas dos dias: ${entradas2dias}`);
-                resumen.push(`Entradas tres dias: ${entradas3dias}`);
-                resumen.push(`Camisetas: ${totalCamisetas}`);
-                resumen.push(`Etiquetas: ${totalEtiquetas}`);
-
-                for (let i= 0; i <resumen.length; i++){  
-                resumenImprimir.innerHTML=`Tu lista: </br> ${resumen[i]}`;
-                console.log(resumen[i]);
-                    
+            
+            function calcularSuma(event){
+                let emailValue= email.value;
+                event.preventDefault();
+                if(regalos.value === " "){
+                    alert("Debes elegir un regalo");    
                 }
-                email.addEventListener("change", cambiarMail);
+                else if(nombre.value === ""){
+                    alert("Nombre es obligatorio");
+                    nombre.style.border= "solid 2px red"; 
+                }
+                else if(apellidos.value === ""){
+                    alert("Apellidos es obligatorio");
+                    apellidos.style.border= "solid 2px red"; 
+                }
+                else if(email.value === ""){
+                    alert("email es obligatorio");
+                    email.style.border= "solid 2px red"; 
+                }
+               
+                else if(!validateEmail(emailValue)){
+                    alert("email es incorrecto");
+                    email.style.border= "solid 2px red";
+                } 
+                else{
 
+                    //Extras + entradas
+                    let entradas1dia= parseInt(un_dia.value);
+                    let entradas2dias= parseInt(dos_dias.value);
+                    let entradas3dias= parseInt(tres_dias.value);
+                    let totalCamisetas= parseInt(camiseta.value);
+                    let totalEtiquetas= parseInt(etiqueta.value);
+                    let camisetasDescuento= totalCamisetas*10-(totalCamisetas*10*0.07);
+                    
+                    let total= entradas1dia*30+entradas2dias*45+entradas3dias*50+totalEtiquetas*5+camisetasDescuento;
+                    let totalImprimir= document.querySelector(".total");
+                    totalImprimir.innerHTML=(`TOTAL: ${total}`);
 
+                    clean(".lista");
 
-        //  ESTO DEBERIA VALIDAR UN MAIL CORRECTO PERO NO HACE NADA 
-        //         function cambiarMail(){
-        //             if("@" === null){
-        //                 alert("email incorrecto");
-        //                 email.style.border= "solid 2px red";
-        //     }
-        // }
+                    
+                    //RESUMEN //
+                    
+                    let resumen=[];
+                    let resumenImprimir= document.querySelector(".lista");
+                    resumen.push(`Entradas un dia: ${entradas1dia}`);
+                    resumen.push(`Entradas dos dias: ${entradas2dias}`);
+                    resumen.push(`Entradas tres dias: ${entradas3dias}`);
+                    resumen.push(`Camisetas: ${totalCamisetas}`);
+                    resumen.push(`Etiquetas: ${totalEtiquetas}`);
+                    
+                    for (let i= 0; i <resumen.length; i++){
+                      
+                    resumenImprimir.innerHTML= `${resumenImprimir.innerHTML}<li> ${resumen[i]} </li>`;
+                    console.log(resumen[i]);
+                        
+                    }
+        
                 
                 
-             }
+                }
 
-         }
-        
-        
-
+            }
         }
         
+         
          //OCULTAR //consigo que lo muestre pero no que lo oculte si el valor vuelve a ser 0
          const viernes= document.getElementById("viernes");
          const sabado= document.getElementById("sabado");
@@ -105,41 +109,41 @@
         
          
         
-        if(un_dia === null){}
-        else{
-            un_dia.addEventListener("change", ocultarV);
-            function ocultarV(){
-            if(un_dia.value > 0){
-                viernes.style.display= "grid";
-        }   
-            
-            if(un_dia.value === 0){ 
-                viernes.style.display= "none";
-            }
-        }
-        }
-        if(dos_dias === null){}
-        else{
-            dos_dias.addEventListener("change", ocultarVS);
-            function ocultarVS(){
-                if(dos_dias.value > 0){
+        if(un_dia !== null && dos_dias !== null && tres_dias !== null){
+            un_dia.addEventListener("change", ocultar);
+            dos_dias.addEventListener("change", ocultar);
+            tres_dias.addEventListener("change", ocultar);
+
+            function ocultar(){
+                if(parseInt(tres_dias.value)>0){
                     viernes.style.display= "grid";
                     sabado.style.display= "grid";
-            }
-            }
-        }
-        if(tres_dias === null){}
-        else{
-            tres_dias.addEventListener("change", ocultarVSD);
-                function ocultarVSD(){
-                    if(tres_dias.value > 0){
-                        viernes.style.display= "grid";
-                        sabado.style.display= "grid";
-                        domingo.style.display= "grid";
-                    }
+                    domingo.style.display= "grid";
                 }
+                else if(parseInt(dos_dias.value)>0){
+                    viernes.style.display= "grid";
+                    sabado.style.display= "grid";
+                    domingo.style.display= "none";
+                }
+                else if(parseInt(un_dia.value)>0){
+                    viernes.style.display= "grid";
+                    sabado.style.display= "none";
+                    domingo.style.display= "none";
+                }
+                else{
+                    viernes.style.display= "none";
+                    sabado.style.display= "none";
+                    domingo.style.display= "none";
+                }
+                
+
+            }
+
+
         }
         
+            
+       
         
         
         
