@@ -185,11 +185,35 @@ function clean(selector){
             contenidoSeminarios.style.display= "flex";
         }
 
+    //Contador interactivo
+$(`.contenedor-resumen .apartado:nth-child(1) .numero`).animateNumber({number: 6}, 3000);
+$(`.contenedor-resumen .apartado:nth-child(2) .numero`).animateNumber({number: 15}, 3000);
+$(`.contenedor-resumen .apartado:nth-child(3) .numero`).animateNumber({number: 3}, 3000);
+$(`.contenedor-resumen .apartado:nth-child(4) .numero`).animateNumber({number: 9}, 3000);
+    //tiempo
+$(".contenido-contador .item:nth-child(1) .numero").countdown("2019/04/26", function(event) {
+    $(this).text(
+    event.strftime('%D')
+    );
+});
+$(".contenido-contador .item:nth-child(2) .numero").countdown("2019/04/26", function(event) {
+    $(this).text(
+    event.strftime('%H')
+    );
+});   
+$(".contenido-contador .item:nth-child(3) .numero").countdown("2019/04/26", function(event) {
+    $(this).text(
+    event.strftime('%M')
+    );
+});   
+$(".contenido-contador .item:nth-child(4) .numero").countdown("2019/04/26", function(event) {
+    $(this).text(
+    event.strftime('%S')
+    );
+});   
+        
 
 
-        
-            
-        
         
 
 
