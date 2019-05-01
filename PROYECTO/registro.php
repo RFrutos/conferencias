@@ -25,46 +25,7 @@
 
   <!-- Add your site or application content here -->
   <div class="contenedor">
-    <header class="encabezado">
-      <div class="logo">
-        <div class="imagen-encabezado"></div>
-        <div class="contenedor-iconos-superiores">
-          <div class="iconos-superiores">
-            <a href="http://facebook.com" target="blank" rel="noopener"noreferer><i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="http://twitter.com" target="blank" rel="noopener"noreferer><i class="fab fa-twitter"></i></a>
-            <a href="http://www.pinterest.es" target="blank" rel="noopener"noreferer><i class="fab fa-pinterest-square"></i></a>
-            <a href="http://youtube.com" target="blank" rel="noopener"noreferer><i class="fab fa-youtube-square"></i></a>
-            <a href="http://instagram.com" target="blank" rel="noopener"noreferer><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="texto-encabezado">
-          <div class="parrafos">
-            <p class="fecha"><i class="far fa-calendar-alt"></i> 10-12 DIC</p>
-            <p class="lugar"><i class="fas fa-map-marker-alt"></i> GUADALAJARA, MX</p>
-          </div>
-          <div class="titulos">
-            <p class="titulo">GDLWEBCAMP</p>
-            <p class="subtitulo">la mejor conferencia de <span>diseño web</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="barra">
-        <nav class="navegacion">
-          <div class="link-titulo">
-            <i class="fas fa-square"></i>
-            <a href="index.html" class="titulo">GDLWEBCAMP</a>
-          </div>
-          <div class="link-nav">
-            <a href="conferencia.html">CONFERENCIA</a>
-            <a href="calendario.html">CALENDARIO</a>
-            <a href="invitados.html">INVITADOS</a>
-            <a class="reservas" href="registro.html">RESERVAS</a>
-          </div>
-
-        </nav>
-      </div>  
-    </header>
+  <?php include_once'includes/templates/header.php'?>
 
     <main class="formulario">
             <div class="encabezado-formulario">
@@ -234,41 +195,7 @@
 
         
     </main>
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="pie">
-        <div class="contenido">
-          <div class="item">
-            <h4>Sobre <span>gdlwebcamp</span></h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis officiis quia perspiciatis aspernatur deleniti, accusantium nesciunt laboriosam illo fuga quam beatae debitis? Dolore debitis aut ad, eligendi perspiciatis cumque.</p>
-          </div>
-          <div class="item">
-            <h4>ultimos <span>tweets</span></h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis officiis quia perspiciatis aspernatur deleniti, accusantium nesciunt laboriosam illo fuga quam beatae debitis? Dolore debitis aut ad, eligendi perspiciatis cumque.</p>
-          </div>
-          <div class="item">
-            <h4>redes <span>sociales</span></h4>
-            <a href="http://facebook.com" target="blank" rel="noopener"noreferer><i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="http://twitter.com" target="blank" rel="noopener"noreferer><i class="fab fa-twitter"></i></a>
-            <a href="http://www.pinterest.es" target="blank" rel="noopener"noreferer><i class="fab fa-pinterest-square"></i></a>
-            <a href="http://youtube.com" target="blank" rel="noopener"noreferer><i class="fab fa-youtube-square"></i></a>
-            <a href="http://instagram.com" target="blank" rel="noopener"noreferer><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-    </footer>
-      <div class="copy">
-        <p>Todos los derechos reservados GDLWEBCAMP 20016 &copy</p>
-      </div>
+    <?php include_once'includes/templates/footer.php'?>
   </div>
     
   
