@@ -28,24 +28,29 @@
                 <?php 
                 try{
                     require_once('includes/functions/bd_conexion.php');
-                    $sql= "SELECT * FROM eventos";
+                    $sql= " SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, nombre_invitado, apellido_invitado ";
+                    $sql .= " FROM eventos ";
+                    $sql .= " INNER JOIN categoria_evento ";
+                    $sql .= " ON eventos.id_cat_evento= categoria_evento.id_categoria ";
+                    $sql .= " INNER JOIN invitados ";
+                    $sql .= " ON eventos.id_inv= invitados.invitado_id ";
+                    
                     $resultado= $conn->query($sql);
+                    
                 }catch(\Exception $e){
                     echo $e->getMessage();
                 }
+                
+                
                 ?>
                 
             <div class="contenedor-calendario">
                 <pre>
                 <?php
                 
-                while($eventos=$resultado->fetch_assoc()){?>
-                    
-                        <?php var_dump($eventos); ?> 
-                    
-                    <?php }?> 
-                
-                
+                while($eventos=$resultado->fetch_assoc()){   
+                    var_dump($eventos); 
+                 }?> 
                 </pre>
                 
             </div>
