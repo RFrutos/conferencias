@@ -35,30 +35,52 @@
                     $sql .= " INNER JOIN invitados ";
                     $sql .= " ON eventos.id_inv= invitados.invitado_id ";
                     
-                    $resultado= $conn->query($sql);
-                    
+                    $resultado= $conn->query($sql);  
                 }catch(\Exception $e){
                     echo $e->getMessage();
                 }
-                
-                
                 ?>
-                
             <div class="contenedor-calendario">
                 <pre>
                 <?php
-                
+                $calendario= array();
                 while($eventos=$resultado->fetch_assoc()){   
-                    var_dump($eventos); 
+                    $fecha=$eventos["fecha_evento"];
+                    $evento= array(
+                       "titulo"=> $eventos["nombre_evento"],
+                       "fecha" => $eventos["fecha_evento"],
+                       "hora"=> $eventos["hora_evento"],
+                       "categoria"=>$eventos["cat_evento"],
+                       "invitado"=>$eventos["nombre_invitado"] . " ". $eventos["apellido_invitado"]
+                    );
+                    $calendario[$fecha][]=$evento;
                  }?> 
+                    <?php 
+                        foreach($calendario as $dia=> $lista_eventos){?>
+                            <h3> 
+                                <i class="fa fa-calendar"></i>
+                                <?php
+                                    setlocale(LC_TIME, "spanish");
+                                    echo strftime("%A, %d de %B del %Y", strtotime($dia));
+                                ?>
+                            </h3>
+                        <?php foreach($lista_eventos as $evento) { ?>
+                            <div class="dia">
+                                <p class="titulo"><?php echo $evento["titulo"]?></p>
+                                <p class="hora"><i class="far fa-clock" ></i> <?php echo $evento["hora"]?></p>
+                                <p class="categoria"><?php echo $evento["categoria"]?></p>
+                                <p class="invitado"><i class="fas fa-user" ></i><?php echo $evento["invitado"]?></p>
+                            </div>
+                        <?php }?>
+                       <?php } ?>
+                       
                 </pre>
-                
-            </div>
                 <?php 
-                $conn->close();
+                    $conn->close();
                 ?>
-            
+            </div>
+                
         </section>
-        <?php include_once'includes/templates/footer.php'?>
+        <?php include_once'includes/templates/footer.php'?> 
     </div>      
 </body>
